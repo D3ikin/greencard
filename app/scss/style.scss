@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 
@@ -66,7 +67,7 @@
   &__offer-item{
     font-size: 16px;
     line-height: 22px;
-    width: 250px;
+    max-width: 250px;
     padding: 10px 10px 15px 25px;
     background: #FFFFFF;
     box-shadow: 0px 0px 150px rgba(18, 24, 32, 0.1);
@@ -863,7 +864,8 @@
   }
   &__list{
     display: flex;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
+    max-width: 1200px;
   }
   &__list-item{
     background: #FFFFFF;
@@ -1109,6 +1111,74 @@
     display: inline-block;
     color: #343235;
     margin-bottom: 15px;
+  }
+}
+
+.popup{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  z-index: 21;
+  background: #0000006e;
+  display: none;
+  &_container{
+    padding:30px;
+    position: absolute;
+    width:50vw;
+    height:70vh;
+    top: 15vh;
+    left:25vw;
+    background: white;
+    border-radius: 4px;
+  }
+  &_close{
+    position: absolute;
+    top: 15px;
+    right:15px;
+    line-height: 35px;
+    font-size: 35px;
+    transform: rotate(45deg);
+    color: $accent;
+    cursor: pointer;
+  }
+  &_phone{
+    width:100%;
+    background: white;
+    border:1px solid #0000003e;
+    height:35px;
+    padding-left: 5px;
+    border-radius: 6px;
+    &:focus{
+      border-color:$accent;
+      outline: none;
+    }
+  }
+  &_message{
+    &:focus{
+      border-color:$accent;
+      outline: none;
+    }
+    resize: none;
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 10px;
+    width:100%;
+    background: white;
+    border:1px solid #0000003e
+  }
+  &_button{
+    outline: none;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    margin: auto;
+    cursor: pointer;
+  }
+  &_title{
+    font-size: 24px;
   }
 }
 

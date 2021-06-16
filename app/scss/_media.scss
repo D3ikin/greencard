@@ -1,0 +1,98 @@
+@media (max-width: 1600px) {
+  .title{
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .header-top__call-btn {
+    width: 220px;
+    height: 50px;
+  }
+  .header__img--pen{
+    width: 100px;
+    top: 175px;
+  }
+  .header__img--flag{
+    width: 280px;
+  }
+  .header__inner-img {
+    width: 420px;
+    margin-left: -115px;
+  }
+  .header__content-title{
+    margin-bottom: 0;
+  }
+  .header__content-subtitle{
+    margin-bottom: 15px;
+  }
+  .header__offer-img{
+    width: 100px;
+  }
+  .header__offer-list{
+    margin-bottom: 25px;
+  }
+  .header__offer-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .header__content-btn{
+    width: 460px;
+    height: 60px;
+  }
+  .header__accept-text {
+    line-height: 19px;
+  }
+  .header__offer-price {
+    font-size: 15px;
+    line-height: 22px;
+    padding: 6px 20px 7px 50px;
+    width: 410px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .header__inner-img {
+    width: 400px;
+    margin-left: -75px;
+  }
+  .header__content{
+    margin-left: 0;
+  }
+  .header__img--pen{
+    width: 85px;
+  }
+  .header__img--flag{
+    width: 240px;
+  }
+}
+
+@media (max-width: 1024px){
+  .title{
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .header-top__logo{
+    margin-right: 0;
+  }
+  .header-top__logo-descr{
+    display: none;
+  }
+  .header__content-title{
+    max-width: 560px;
+    br{
+      display: none;
+    }
+  }
+  .header__content-subtitle{
+    max-width: 500px;
+    line-height: 25px;
+  }
+  .header-top__call-text {
+    color: #7F8288;
+    font-size: 14px;
+    line-height: 15px;
+  }
+  .header-top__call-phone {
+    font-size: 18px;
+  }
+}

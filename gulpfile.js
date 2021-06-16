@@ -14,7 +14,7 @@ function browsersync() {
     server: {
       baseDir: 'app/',
     }
-  })
+  });
 }
 
 function styles() {
@@ -26,18 +26,20 @@ function styles() {
     grid: true,
   }))
   .pipe(dest('app/css'))
-  .pipe(browserSync.stream())
+  .pipe(browserSync.stream());
 }
 
 function scripts() {
   return src ([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js',
+    // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
   .pipe(uglify())
   .pipe(dest('app/js'))
-  .pipe(browserSync.stream())
+  .pipe(browserSync.stream());
 }
 
 function images() {
@@ -53,7 +55,7 @@ function images() {
       ]
     })
   ]))
-  .pipe(dest('dist/images'))
+  .pipe(dest('dist/images'));
 }
 
 function build() {
@@ -62,11 +64,11 @@ function build() {
     'app/css/style.min.css',
     'app/js/main.min.js',
   ], {base: 'app'})
-  .pipe(dest('dist'))
+  .pipe(dest('dist'));
 }
 
 function cleanDist() {
-  return  del('dist')
+  return  del('dist');
 }
 
 function watching() {
@@ -81,6 +83,6 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
-exports.build = series(cleanDist, images, build)
+exports.build = series(cleanDist, images, build);
 
 exports.default = parallel (styles, scripts, browsersync, watching);
