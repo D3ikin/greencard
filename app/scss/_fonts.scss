@@ -1,0 +1,36 @@
+@font-face{
+  font-family: 'Circe-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Circe-Regular'),
+       url('../fonts/Circe-Regular.woff2') format('woff2'),
+       url('../fonts/Circe-Regular.woff') format('woff');
+  font-display: swap;
+}
+@font-face{
+  font-family: 'Circe-Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Circe-Bold'),
+       url('../fonts/Circe-Bold.woff2') format('woff2')
+       url('../fonts/Circe-Bold.woff') format('woff');
+  font-display: swap;
+}
+@font-face{
+  font-family: 'RoadRadio-Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: local('RoadRadio-Bold'),
+       url('../fonts/RoadRadio-Bold.woff2') format('woff2'),
+       url('../fonts/RoadRadio-Bold.woff') format('woff');
+  font-display: swap;
+}
+@font-face{
+  font-family: 'BerlingskeSerif-Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: local('BerlingskeSerif-Bold'),
+       url('../fonts/BerlingskeSerif-Bold.woff2') format('woff2'),
+       url('../fonts/BerlingskeSerif-Bold.woff') format('woff');
+  font-display: swap;
+}
