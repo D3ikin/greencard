@@ -98,11 +98,25 @@
     color: $accent;
     background-color: #fff;
     box-shadow: 0px 0px 150px rgba(18, 24, 32, 0.1);
-    padding: 6px 20px 7px;
+    padding: 6px 20px 7px 60px;
     width: 435px;
     margin: 0 auto;
     border-radius: 0 0 10px 10px;
     z-index: 20;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url('../images/rubs.svg');
+      background-repeat: no-repeat;
+      left: 30px;
+      width: 44px;
+      height: 22px;
+    }
+    span{
+      text-decoration: line-through;
+      color: $secondary;
+    }
   }
   &__accept-text{
     font-size: 16px;
@@ -115,6 +129,10 @@
     color: $accent;
     text-decoration: underline;
   }
+}
+.line-through{
+  text-decoration: line-through;
+  color: $secondary;
 }
 
 .header-top{
@@ -400,6 +418,15 @@
     height: 95px;
     margin-right: 30px;
   }
+  &__btn-get{
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    span{
+      margin-left: 25px;
+    }
+  }
   &__descr-btn{
     @extend %roadradio-700;
     font-size: 17px;
@@ -409,6 +436,9 @@
 }
 .lottery-margin{
   margin-top: -300px;
+}
+.lottery-footer{
+  background-image: url('../images/lottery-bg2.jpg');
 }
 
 /* about-program */
@@ -582,6 +612,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 30px;
   }
   &__item-icon{
     background-color: #fff;
@@ -869,6 +900,70 @@
 
 /* reviews */
 
+/* about */
+
+.about{
+  padding: 215px 0 400px;
+  background-image: url('../images/about-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: -1;
+  &__title{
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 30px;
+    span{
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+  &__box-quote{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 120px 6px rgba(25, 25, 0, 0.07);
+    border-radius: 115px;
+    max-width: 900px;
+    padding: 20px 90px 40px;
+    margin: 0 auto 90px;
+  }
+  &__quote-img{
+    margin: 0 auto 15px;
+    width: 44px;
+  }
+  &__quote{
+    text-align: center;
+  }
+  &__title-clients{
+    margin: 0 auto 50px;
+    text-align: center;
+    max-width: 830px;
+    span{
+      color: $default;
+    }
+  }
+  &__statistic-list{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__statistic-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__statistic-num{
+    @extend %berlingske-700;
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 5px;
+    color: $accent;
+  }
+  &__statistic-from{
+    font-size: 18px;
+    line-height: 29px;
+  }
+}
+
+/* about */
+
 .question-answer{
   padding: 50px 0 100px;
   &__title{
@@ -914,6 +1009,106 @@
     padding: 18px 30px 18px 40px;
     font-size: 16px;
     line-height: 20px;
+  }
+}
+
+.bottom-box{
+  padding: 120px 0 23px;
+  &__title{
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  &__subtitle{
+    @extend %circe-400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+  }
+}
+
+.footer{
+  background-image: url('../images/map.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding: 300px 0 144px;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    background-image: url('../images/mark-icon.svg');
+    background-repeat: no-repeat;
+    width: 106px;
+    height: 152px;
+    right: 30%;
+    top: 430px;
+  }
+  &__form{
+    background: #FFFFFF;
+    box-shadow: 0px 93px 124px rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    max-width: 288px;
+    padding: 30px 20px;
+  }
+  &__form-subtitle{
+    font-size: 15px;
+    position: relative;
+    padding-left: 28px;
+    color: $secondary;
+    margin-bottom: 10px;
+  }
+  &__form-subtitle--tel{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url('../images/tel-icon.svg');
+      background-repeat: no-repeat;
+      left: 0;
+      width: 18px;
+      height: 18px;
+    }
+  }
+  &__form-subtitle--mail{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url('../images/mail-icon.svg');
+      background-repeat: no-repeat;
+      left: 0;
+      width: 18px;
+      height: 18px;
+    }
+  }
+  &__form-subtitle--addres{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url('../images/addres-icon.svg');
+      background-repeat: no-repeat;
+      left: 0;
+      width: 18px;
+      height: 18px;
+
+    }
+  }
+  &__btn{
+    margin-bottom: 25px;
+  }
+  &__form-tel{
+    @extend %circe-700;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #343235;
+    display: inline-block;
+  }
+  &__form-mail{
+    font-size: 19px;
+    line-height: 26px;
+    display: inline-block;
+    color: #343235;
+    margin-bottom: 15px;
   }
 }
 
