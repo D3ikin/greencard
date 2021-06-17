@@ -749,9 +749,8 @@
   }
   &__list{
     display: grid;
-    grid-template-columns: (1fr 1fr 1fr);
-    grid-column-gap: 25px;
-    grid-row-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(373px, 1fr));
+    grid-gap: 30px 25px;
     grid-template-rows: max-content;
     counter-reset: services-counter;
     margin-bottom: 50px;
@@ -765,6 +764,7 @@
     align-items: center;
     padding: 15px 30px 25px;
     position: relative;
+    max-width: 390px;
     &::before{
       content: '0' counter(services-counter);
       position: absolute;
@@ -792,8 +792,8 @@
     top: 40px;
   }
   &__list-item:nth-child(4)::before{
-    left: 95px;
-    bottom: 125px;
+    left: 79px;
+    bottom: 117px;
   }
   &__list-item:nth-child(5)::before{
     left: 90px;
@@ -864,15 +864,20 @@
   }
   &__list{
     display: flex;
-    // justify-content: space-evenly;
-    max-width: 1200px;
+    justify-content: space-evenly;
+    width: 100%;
+    .slick-list{
+      padding: 50px;
+    }
   }
   &__list-item{
     background: #FFFFFF;
-    box-shadow: 0px 20px 100px rgba(49, 58, 67, 0.1);
-    padding: 40px 25px 30px;
+    box-shadow: 0px 20px 50px rgba(49, 58, 67, 0.1);
+    padding: 30px 15px 20px;
     border-radius: 8px;
-    max-width: 373px;
+    max-width: 320px;
+    margin-right: 30px;
+    
     position: relative;
     &::before{
       content: '';
@@ -1126,10 +1131,10 @@
   &_container{
     padding:30px;
     position: absolute;
-    width:50vw;
-    height:70vh;
+    max-width: 600px;
+    height: 315px;
     top: 15vh;
-    left:25vw;
+    margin: 0 auto;
     background: white;
     border-radius: 4px;
   }
@@ -1143,11 +1148,13 @@
     color: $accent;
     cursor: pointer;
   }
-  &_phone{
+  &_phone,
+  &_email{
     width:100%;
     background: white;
     border:1px solid #0000003e;
     height:35px;
+    margin-bottom: 10px;
     padding-left: 5px;
     border-radius: 6px;
     &:focus{
@@ -1163,8 +1170,8 @@
     resize: none;
     border-radius: 6px;
     padding: 5px;
-    margin-top: 10px;
     width:100%;
+    margin-bottom: 15px;
     background: white;
     border:1px solid #0000003e
   }
@@ -1179,6 +1186,7 @@
   }
   &_title{
     font-size: 24px;
+    margin-bottom: 15px;
   }
 }
 

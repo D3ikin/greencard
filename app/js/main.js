@@ -14,11 +14,6 @@ $(function(){
       $('.header__offer-list').slick('unslick');
     }
   });
-  $('.reviews__list').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3
-  });
   $('.question-answer__item-trigger').on('click', function(){
     $(this).next('.question-answer__item-content').slideToggle(300);
     });

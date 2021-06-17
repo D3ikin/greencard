@@ -61,6 +61,14 @@
   .lottery__title{
     font-size: 28px;
   }
+
+  .footer{
+    padding: 135px 0 144px;
+    &::before{
+      right: 25%;
+      top: 226px;
+    }
+  }
 }
 
 @media (max-width: 1440px) {
@@ -76,6 +84,19 @@
   }
   .header__img--flag{
     width: 240px;
+  }
+  .footer{
+    padding: 105px 0 144px;
+    &::before{
+      right: 23%;
+    }
+  }
+}
+@media (max-width: 1360px){
+  .footer{
+    &::before{
+      right: 20%;
+    }
   }
 }
 
@@ -157,6 +178,69 @@
   .help__img-bg{
     display: none;
   }
+
+  /* about program */
+  .about-program__title{
+    max-width: 100%;
+  }
+
+  .advantages__inner{
+    position: relative;
+  }
+  .advantages__list{
+    margin-bottom: 50px;
+  }
+  .advantages__img-box{
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    bottom: 0;
+  }
+  .advantages__item-icon {
+    width: 54px;
+    height: 54px;
+  }
+
+
+  .documents__list-item--right,
+  .documents__list-item--left {
+    padding: 10px 10px 25px 50px;
+    &::before{
+      font-size: 60px;
+      left: 25px;
+    }
+    .documents__item-descr{
+      margin-left: 25px;
+      width: 100%;
+    }
+  }
+  .documents__item-img {
+    width: 60px;
+    height: 70px;
+  }
+  .documents__list-item--right:nth-child(5)::before {
+    left: 9px;
+    letter-spacing: normal;
+  }
+
+  .question-answer__list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .question-answer__list-item {
+    margin: 0 0 25px 0;
+  }
+  .question-answer__list-item:nth-child(even) {
+    margin-right: 0;
+  }
+  .footer{
+    &::before{
+      right: 11%;
+    }
+  }
 }
 
 @media (max-width: 992px){
@@ -176,9 +260,20 @@
   .help__list-item--left:nth-child(4) {
     margin: 0 0 25px 0;
   }
+
+  .requirements__list{
+    flex-wrap: wrap;
+  }
+  .advantages__item-subtitle {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 @media (max-width: 768px){
+  body{
+    font-size: 15px;
+  }
   .header-top{
     margin-bottom: 20px;
   }
@@ -220,6 +315,88 @@
   }
   .lottery__btn{
     height: 75px;
+  }
+  .lottery__leave-aplication{
+    height: 65px;
+  }
+  .lottery__btn-participate{
+    height: 65px;
+    width: 280px;
+    text-align: center;
+    padding: 0 15px;
+  }
+  .lottery__btn-get {
+    height: 65px;
+    max-width: 350px;
+    width: 100%;
+    font-size: 15px;
+  }
+
+
+  .services__btn{
+    height: 65px;
+  }
+
+  /* about program */
+  .about-program__content{
+    max-width: 400px;
+  }
+  /* availability */
+  .availability{
+    padding: 45px 0 380px;
+  }
+  .availability__list{
+    border-radius: 10px;
+  }
+  .availability__list-item{
+    padding: 5px 5px 5px 10px;
+  }
+  .availability__item-img{
+    margin-right: 9px;
+  }
+
+  .requirements__btn{
+    height: 65px;
+  }
+
+
+  .advantages__img-box{
+    display: none;
+  }
+
+  .documents__item-img{
+    display: none;
+  }
+  .documents__list-item--right,
+  .documents__list-item--left {
+    padding: 10px 10px 10px 40px;
+    height: 90px;
+    &::before{
+      font-size: 40px;
+      left: 15px;
+    }
+  }
+
+  .services__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .services__list-item{
+    width: 100%;
+  }
+
+  .about__statistic-list{
+    flex-direction: column;
+  }
+  .about__statistic-item + .about__statistic-item{
+    margin-top: 40px;
+  }
+  .footer{
+    background-position: 66% 50%;
+    &::before{
+      display: none;
+    }
   }
 }
 
@@ -270,6 +447,12 @@
       display: none;
     }
   }
+  .lottery__subtitle-img--piggy{
+    max-width: 90px;
+    max-height: 90px;
+    min-width: 90px;
+    min-height: 90px;
+  }
   .lottery__subtitle{
     font-size: 16px;
     line-height: 20px;
@@ -280,9 +463,108 @@
     text-align: center;
     height: 68px;
   }
+  .lottery__btn-wrapper{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .lottery__leave-aplication {
+    width: 275px;
+    height: 55px;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  .lottery__descr-btn {
+    font-size: 14px;
+    line-height: 20px;
+    width: 270px;
+  }
+  .lottery__btn-get{
+    font-size: 14px;
+    line-height: 20px;
+    width: 280px;
+    padding: 0 15px;
+  }
+
+  /* availability */
+  .availability__inner{
+    flex-direction: column;
+  }
+  .availability__list{
+    width: 100%;
+  }
+  .availability__list--left{
+    border-radius: 10px 10px 0 0;
+  }
+  .availability__list--right{
+    border-radius: 0 0 10px 10px;
+  }
+  .availability__list-item{
+    min-height: 90px;
+  }
+  /* .requirements */
+  .requirements__list{
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .requirements__list-item{
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .requirements__item-img {
+    min-width: 140px;
+    min-height: 140px;
+    max-width: 140px;
+    max-height: 140px;
+    box-shadow: 0px 20px 50px rgba(18, 24, 32, .3);
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+  .requirements__text-wrapper{
+    text-align: left;
+  }
+  .requirements__item-subtitle {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .requirements__item-descr {
+    line-height: 18px;
+    width: 100%;
+  }
+
+  /* advantages */
+
+  .advantages{
+    padding: 70px 0 315px;
+  }
+  .advantages__inner{
+    flex-direction: column;
+  }
+  .advantages__list{
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .advantages__list-item{
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .advantages__item-icon{
+    max-width: 54px;
+    max-height: 54px;
+    min-width: 54px;
+    min-height: 54px;
+    margin: 0 15px;
+  }
 }
 
 @media (max-width: 540px){
+  body{
+    font-size: 14px;
+    line-height: 18px;
+  }
   .header{
     padding-bottom: 100px;
   }
@@ -327,6 +609,36 @@
   }
   .lottery__btn{
     width: 310px;
+  }
+  .lottery__subtitle-img--piggy{
+    max-width: 70px;
+    max-height: 70px;
+    min-width: 70px;
+    min-height: 70px;
+  }
+  /* about program */
+  .about-program__inner{
+    flex-direction: column;
+  }
+  .about-program__content{
+    max-width: 100%;
+  }
+  .about-program__img{
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .requirements__btn{
+    width: 100%;
+    height: 50px;
+  }
+  .requirements__descr-btn {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .about__box-quote{
+    padding: 20px 40px 40px;
   }
 }
 
@@ -378,6 +690,36 @@
   .lottery__btn{
     width: 290px;
   }
+
+  .requirements__item-img {
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    box-shadow: 0px 10px 30px rgba(18, 24, 32, .3);
+    margin-bottom: 0;
+    margin-right: 15px;
+    padding: 4px;
+  }
+
+  .services__list-item{
+    padding: 15px 20px 15px;
+  }
+  .services__item-content {
+    width: 220px;
+  }
+  .services__list-item:nth-child(1)::before,
+  .services__list-item:nth-child(2)::before,
+  .services__list-item:nth-child(3)::before,
+  .services__list-item:nth-child(4)::before,
+  .services__list-item:nth-child(5)::before,
+  .services__list-item:nth-child(6)::before,
+  .services__list-item:nth-child(7)::before,
+  .services__list-item:nth-child(8)::before,
+  .services__list-item:nth-child(9)::before{
+    left: 10px;
+    top: 25px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -397,6 +739,21 @@
   .lottery__btn{
     width: 100%;
     height: 55px;
+  }
+  .lottery__btn-wrapper{
+    align-items: center;
+  }
+
+  .documents__inner{
+    flex-direction: column;
+  }
+  .documents__list--left{
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+  }
+
+  .services__item-img {
+    width: 75px;
   }
 }
 @media (max-width: 320px) {
