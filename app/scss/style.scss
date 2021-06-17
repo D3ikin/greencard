@@ -1182,4 +1182,35 @@
   }
 }
 
+.header__offer-list{
+  .slick-dots{
+    position: absolute;
+    right: -45px;
+    top: 50%;
+    transform: translateY(-50%) 
+    
+  }
+  .slick-dots li + li{
+    margin-top: 5px;
+  }
+  .slick-dots button{
+    border: none;
+    font-size: 0;
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid $accent;
+  }
+  
+  .slick-dots .slick-active button{
+    width: 10px;
+    height: 10px;
+    border: 1px solid transparent;
+    background-color:$accent;
+    border-radius: 3px
+  }
+}
+
 @import 'media';
