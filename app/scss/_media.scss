@@ -167,7 +167,7 @@
     margin-right: 15px;
   }
   .header__offer-title{
-    width: 300px;
+    width: 100%;
     br{
       display: none;
     }
@@ -485,14 +485,12 @@
     }
   }
   .lottery__subtitle-img--piggy{
-    max-width: 90px;
-    max-height: 90px;
-    min-width: 90px;
-    min-height: 90px;
+    display: none;
   }
   .lottery__subtitle{
     font-size: 16px;
     line-height: 20px;
+    margin-left: 0;
   }
   .lottery__btn{
     width: 400px;
@@ -539,6 +537,9 @@
     min-height: 90px;
   }
   /* .requirements */
+  .requirements{
+    padding: 40px 0 0;
+  }
   .requirements__list{
     flex-direction: column;
     max-width: 100%;
@@ -599,11 +600,32 @@
     margin: 0 15px;
   }
 
+  .about{
+    padding: 60px 0 200px;
+  }
+  .reviews{
+    padding: 50px 0;
+  }
+  .reviews__title{
+    margin-bottom: 30px;
+  }
   .reviews__list{
     .slick-slide{
       margin: 0 15px 0 0;
       left: 0;
     }
+  }
+  .question-answer {
+    padding: 50px 0 25px;
+  }
+  .bottom-box {
+    padding: 40px 0 23px;
+  }
+  .footer {
+    padding: 105px 0 75px;
+  }
+  .footer__form{
+    margin: -85px auto 85px;
   }
 }
 
@@ -682,10 +704,19 @@
   .requirements__descr-btn {
     font-size: 16px;
     line-height: 22px;
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
   }
-
   .about__box-quote{
-    padding: 20px 40px 40px;
+    padding: 20px 40px 20px;
+    margin: 0 auto 40px;
+  }
+  .about__title-clients{
+    margin: 0 auto 30px;
+  }
+  .about__statistic-item + .about__statistic-item {
+    margin-top: 25px;
   }
 }
 
@@ -817,7 +848,11 @@
   }
   .documents__list--left{
     border: none;
-    border-bottom: 1px solid rgba(0,0,0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .requirements__btn {
+    text-align: center;
+    padding: 0 15px;
   }
 
   .services__item-img {
@@ -851,6 +886,11 @@
     }
     .slick-slide{
       margin-right: 3px;
+    }
+  }
+  .about__title-clients{
+    br{
+      display: none;
     }
   }
   .reviews__list-item{
