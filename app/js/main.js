@@ -1,18 +1,58 @@
 $(function(){
-  $(window).on('load resize', function() {
-    if ($(window).width() < 1025) {
-      $('.header__offer-list').slick({
+  $('.reviews__list').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="slick-prev"><img src="images/prev.svg" alt="arrow left"></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="images/next.svg" alt="arrow right"></button>',
+    responsive: [
+    {
+      breakpoint: 1361,
+      settings: {
+        arrows: false,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 1180,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
         arrows: false,
         dots: true,
-        centerMode: true,
-        variableWidth: true,
-        infinite: true,
+        centerMode: true
+      }
+    },
+    {
+      breakpoint: 993,
+      settings: {
+        slidesToShow: 1,
         slidesToScroll: 1,
-        slidesToShow: 1
-      });
-    } else {
-      $('.header__offer-list').slick('unslick');
+        arrows: false,
+        dots: true,
+        centerMode: true
+      }
+    },
+    {
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        centerMode: false
+      }
+    },
+    {
+      breakpoint: 320,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        centerMode: false
+      }
     }
+    ]
   });
   $('.question-answer__item-trigger').on('click', function(){
     $(this).next('.question-answer__item-content').slideToggle(300);
@@ -41,6 +81,8 @@ $(function(){
     return false;
   });
 });
+
+
 
 
 

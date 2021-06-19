@@ -864,20 +864,73 @@
   }
   &__list{
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    justify-content: center;
     .slick-list{
-      padding: 50px;
+      padding: 40px 0;
+    }
+    .slick-track{
+      left: 40px;
+    }
+    .slick-arrow{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #cbcbcb;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .slick-next{
+      right:-5%;
+    }
+    .slick-prev{
+      left: -5%;
+    }
+
+    .slick-dots{
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+    }
+    .slick-dots li + li{
+      margin-left: 8px;
+    }
+    .slick-dots button{
+      border: none;
+      font-size: 0;
+      padding: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      background-color: #fff;
+      border: 1px solid $accent;
+    }
+    
+    .slick-dots .slick-active button{
+      width: 10px;
+      height: 10px;
+      border: 1px solid transparent;
+      background-color:$accent;
+      border-radius: 3px
     }
   }
   &__list-item{
     background: #FFFFFF;
-    box-shadow: 0px 20px 50px rgba(49, 58, 67, 0.1);
+    box-shadow: 0px 20px 35px rgba(49, 58, 67, 0.1);
     padding: 30px 15px 20px;
     border-radius: 8px;
+    display: flex !important;
+    flex-direction: column;
     max-width: 320px;
-    margin-right: 30px;
-    
+    height: 320px;
     position: relative;
     &::before{
       content: '';
@@ -892,6 +945,9 @@
       top: -20px;
       right: 50px;
     }
+  }
+  &__list-item + .reviews__list-item{
+    margin-left: 30px;
   }
   &__item-name{
     @extend %circe-700;
@@ -1132,11 +1188,12 @@
     padding:30px;
     position: absolute;
     max-width: 600px;
-    height: 315px;
-    top: 15vh;
+    top: 30%;
     margin: 0 auto;
+    left: 0;
+    right: 0;
     background: white;
-    border-radius: 4px;
+    border-radius: 10px;
   }
   &_close{
     position: absolute;
@@ -1148,13 +1205,12 @@
     color: $accent;
     cursor: pointer;
   }
-  &_phone,
-  &_email{
+  &_phone{
     width:100%;
     background: white;
     border:1px solid #0000003e;
-    height:35px;
-    margin-bottom: 10px;
+    height:43px;
+    margin-bottom: 15px;
     padding-left: 5px;
     border-radius: 6px;
     &:focus{
@@ -1162,63 +1218,19 @@
       outline: none;
     }
   }
-  &_message{
-    &:focus{
-      border-color:$accent;
-      outline: none;
-    }
-    resize: none;
-    border-radius: 6px;
-    padding: 5px;
-    width:100%;
-    margin-bottom: 15px;
-    background: white;
-    border:1px solid #0000003e
-  }
   &_button{
     outline: none;
     border: none;
-    width: fit-content;
-    height: fit-content;
-    padding: 20px;
-    margin: auto;
+    width: 200px;
+    height: 47px;
+    margin: 0 auto;
     cursor: pointer;
   }
   &_title{
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 23px;
+    margin-bottom: 20px;
   }
 }
 
-.header__offer-list{
-  .slick-dots{
-    position: absolute;
-    right: -45px;
-    top: 50%;
-    transform: translateY(-50%) 
-    
-  }
-  .slick-dots li + li{
-    margin-top: 5px;
-  }
-  .slick-dots button{
-    border: none;
-    font-size: 0;
-    padding: 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 3px;
-    background-color: #fff;
-    border: 1px solid $accent;
-  }
-  
-  .slick-dots .slick-active button{
-    width: 10px;
-    height: 10px;
-    border: 1px solid transparent;
-    background-color:$accent;
-    border-radius: 3px
-  }
-}
 
 @import 'media';

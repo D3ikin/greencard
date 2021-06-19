@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New Project</title>
+  <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate">
+  <title>Green card Consulting</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -1005,9 +1006,9 @@
           Почитайте <span>отзывы</span>
           наших клиентов
         </h2>
-        <div class="reviews__list">
-          <div class="reviews__list-item">
-            <div>
+        <div class="reviews__wrapper">
+          <ul class="reviews__list">
+            <li class="reviews__list-item">
               <p class="reviews__item-name">Эмилия</p>
               <p class="reviews__item-text">
                 Хочу поблагодарить Green Card Consulting
@@ -1017,11 +1018,8 @@
                 много, но вот уже 2 месяца, как мы
                 с мужем живем в Алабаме. Спасибо вам!
               </p>
-            </div>
-
-          </div>
-          <div class="reviews__list-item">
-            <div>
+            </li>
+            <li class="reviews__list-item">
               <p class="reviews__item-name">Дмитрий</p>
               <p class="reviews__item-text">
                 Хочу сказать спасибо за ваш труд.
@@ -1031,18 +1029,37 @@
                 все безрезультатно. В следующем году
                 снова обращусь к вам!
               </p>
-            </div>
-          </div>
-          <div class="reviews__list-item">
-            <div>
+            </li>
+            <li class="reviews__list-item">
               <p class="reviews__item-name">Андрей</p>
               <p class="reviews__item-text">
                 Рекомендую юристов Green Card Consulting как опытных специалистов своего дела.
                 Помогли подать заявку и принять участие в лотерее без проволочек.
               </p>
-            </div>
-          </div>
+            </li>
+            <li class="reviews__list-item">
+              <p class="reviews__item-name">Андрей</p>
+              <p class="reviews__item-text">
+                Рекомендую юристов Green Card Consulting как опытных специалистов своего дела.
+                Помогли подать заявку и принять участие в лотерее без проволочек.
+              </p>
+            </li>
+            <li class="reviews__list-item">
+              <p class="reviews__item-name">Андрей</p>
+              <p class="reviews__item-text">
+                Рекомендую юристов Green Card Consulting как опытных специалистов своего дела.
+                Помогли подать заявку и принять участие в лотерее без проволочек.
+              </p>
+            </li>
+            <li class="reviews__list-item">
+              <p class="reviews__item-name">Андрей</p>
+              <p class="reviews__item-text">
+                Рекомендую юристов Green Card Consulting как опытных специалистов своего дела.
+                Помогли подать заявку и принять участие в лотерее без проволочек.
+              </p>
+            </li>
         </div>
+      </div>
       </div>
     </section>
 
@@ -1156,14 +1173,12 @@
     <div class="popup">
       <div class="popup_container">
         <div class="popup_close">+</div>
-        <div class="popup_title">Отправьте нам сообщение</div>
+        <div class="popup_title">Оставьте заявку на бесплатную консультацию нашего специалиста</div>
         <form class="send_mail_form" data-remote="true">
           <input type="hidden" name="project_name" value="greencard">
           <input type="hidden" name="admin_email" value="deikincoin@gmail.com">
           <input type="hidden" name="form_subject" value="single_form">
-          <input class="popup_email" type="text" name="Email" placeholder="Email" required>
           <input class="popup_phone" type="text" name="Телефон" placeholder="Ваш номер телефона" required>
-          <textarea class="popup_message" name="Сообщение" placeholder="Сообщение"></textarea>
           <button class="popup_button main-btn">Отправить</button>
         </form>
       </div>
