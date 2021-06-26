@@ -638,8 +638,8 @@
 
 @media (max-width: 540px){
   body{
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 25px;
   }
   .header{
     padding-bottom: 100px;
@@ -679,9 +679,9 @@
     margin-bottom: 15px;
   }
   .lottery__subtitle{
-    font-size: 14px;
-    line-height: 18px;
-    max-width: 255px;
+    font-size: 15px;
+    line-height: 25px;
+    max-width: 290px;
   }
   .lottery__btn{
     width: 310px;
@@ -728,8 +728,21 @@
 }
 
 @media (max-width: 430px){
+  .title{
+    line-height: 30px;
+  }
   .header{
     padding-bottom: 50px;
+  }
+  .header__content-title{
+    margin-bottom: 10px;
+  }
+  .header__content-subtitle{
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+  .header__btn-wrapper{
+    margin: 0 auto;
   }
   .help{
     padding: 30px 0 10px;
@@ -770,7 +783,7 @@
   }
   .header__accept-text{
     display: block;
-    margin: 20px 0 0 22px;
+    margin: 20px 0 0;
   }
   .header__offer-list{
     max-width: 365px;
@@ -785,6 +798,9 @@
     right: 0;
     bottom: 0;
     width: 90px;
+  }
+  .lottery__subtitle-img{
+    display: none;
   }
   .lottery__btn{
     width: 290px;
@@ -821,7 +837,27 @@
   }
   .reviews__list-item{
     max-width: 290px;
-    height: 290px;
+    height: 330px;
+  }
+  .documents__inner{
+    flex-direction: column;
+  }
+  .documents__list--left{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .services__item-descr{
+    line-height: 25px;
+  }
+  .advantages__item-descr{
+    line-height: 25px;
+  }
+  .requirements__item-descr{
+    line-height: 25px;
+  }
+  .question-answer__item-trigger{
+    font-size: 17px;
+    line-height: 27px;
   }
 }
 
@@ -850,13 +886,6 @@
     align-items: center;
   }
 
-  .documents__inner{
-    flex-direction: column;
-  }
-  .documents__list--left{
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
   .requirements__btn {
     text-align: center;
     padding: 0 15px;
